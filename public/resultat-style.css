@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 50%, #4C1D95 100%);
+    color: #1F2937;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero Section */
+.hero-section {
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-content {
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Bravo Section */
+.bravo-container {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.bravo-text {
+    font-size: 120px;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+/* Intro Text */
+.intro-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro-subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.intro-description {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Estimation Card */
+.estimation-card {
+    background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+    border-radius: 30px;
+    padding: 50px 60px;
+    margin-bottom: 40px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    border: 3px solid #ffffff;
+}
+
+.bookmark-icon {
+    position: absolute;
+    top: -5px;
+    right: 60px;
+}
+
+.card-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price-range {
+    font-size: 36px;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.price-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.5;
+}
+
+/* Recommendations Section */
+.recommendations-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.recommendations-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.recommendations-intro {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.recommendation-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.recommendation-icon {
+    flex-shrink: 0;
+}
+
+.recommendation-icon svg {
+    stroke: #FFFFFF;
+}
+
+.recommendation-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.recommendations-note {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    font-style: italic;
+}
+
+/* Pack Details Section */
+.pack-details-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pack-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pack-info {
+    margin-bottom: 20px;
+}
+
+.pack-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pack-item:last-child {
+    border-bottom: none;
+}
+
+.pack-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.pack-value {
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-align: right;
+}
+
+.pack-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cta-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.cta-highlight {
+    font-size: 40px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 35px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-btn-primary {
+    background: #ffffff;
+    color: #000000;
+}
+
+.cta-btn-primary:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+}
+
+.cta-btn-secondary {
+    background: #10B981;
+    color: #FFFFFF;
+}
+
+.cta-btn-secondary:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+}
+
+.cta-descriptions {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.cta-desc {
+    flex: 1;
+    min-width: 300px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+/* Trust Section */
+.trust-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.trust-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.trust-icon {
+    margin-bottom: 15px;
+}
+
+.trust-text {
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background: #000000;
+    color: #FFFFFF;
+    padding: 60px 20px 30px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.footer-brand .footer-logo {
+    max-width: 140px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-tagline {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.footer-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bravo-text {
+        font-size: 70px;
+    }
+
+    .intro-subtitle {
+        font-size: 20px;
+    }
+
+    .intro-description {
+        font-size: 14px;
+    }
+
+    .estimation-card {
+        padding: 30px 25px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .price-range {
+        font-size: 28px;
+    }
+
+    .cta-title {
+        font-size: 28px;
+    }
+
+    .cta-highlight {
+        font-size: 32px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-descriptions {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .trust-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .bravo-text {
+        font-size: 50px;
+    }
+
+    .hero-section {
+        padding: 20px 15px;
+    }
+
+    .estimation-card {
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    .recommendations-section,
+    .pack-details-section {
+        padding: 20px;
+    }
+
+    .bookmark-icon {
+        right: 20px;
+    }
+}

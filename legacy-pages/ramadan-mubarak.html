@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oddysee</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ramadan-mubarak-style.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '855051294181240');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=855051294181240&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <!-- hero-section start -->
+    <section class="hero-section" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+        <img class="hero-img" src="https://silver-chinchilla-534616.hostingersite.com/uploads/GET-ADS/images/h3.png" alt="">
+        <!-- navbar start -->
+        <div class="navbar">             
+            <div class="menu">                        
+                <div>
+                    <img class="logo-img" src="https://silver-chinchilla-534616.hostingersite.com/uploads/GET-ADS/images/oddysse.svg" alt="">
+                </div>             
+            </div> 
+        </div>
+        <!-- navbar end -->
+
+        <!-- Hero Content -->
+        <div data-aos="fade-up" class="hero-main" style="text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 100px 20px 20px 20px;">
+            <div style="max-width: 800px; width: 100%;">
+                <h1 data-aos="fade-up">
+                    <span data-aos="fade-up" class="hero-line1">Ramadan Moubarak</span>
+                </h1>
+                <p data-aos="fade-up" class="hero-paragraph" style="margin-left: auto; margin-right: auto;">
+                    Toute l'équipe d'Oddysee vous souhaite un excellent mois de Ramadan, rempli de paix, de bénédictions et de prospérité.
+                </p>
+                <a data-aos="fade-up" href="/questionnaire" rel="noopener noreferrer" class="btn primary-btn">
+                    Voir plus d'infos
+                    <img src="https://silver-chinchilla-534616.hostingersite.com/uploads/GET-ADS/images/footer-icon.svg" alt="">
+                </a>
+            </div>
+        </div>
+        
+        <!-- footer start -->
+        <footer class="footer-compact" style="margin-top: auto; padding-bottom: 20px;">
+        <div class="footer-container-compact">
+            <p class="footer-copy">©2026 Oddysee | Tous droits réservés.</p>
+        </div>
+        </footer>
+        <!-- footer end -->
+    </section>
+    <!-- hero-section end -->
+
+    <!-- Video Modal Overlay -->
+    <div id="videoModal" class="video-modal-overlay">
+        <button class="video-modal-close" aria-label="Close video">&times;</button>
+        <div class="video-modal-container">
+            <video id="modalVideo" class="modal-video-player" controls>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        window.ODDYSEE_VISITOR_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwfaH7yQrppCuy4Wwy589nbmiOp04FhxQLuOtC-G3zwamoQwzDhCn1r7pU908CqENCjSQ/exec';
+    </script>
+    <script src="visitor-insights.js"></script>
+
+    <!-- Hero Video Modal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroVideo = document.querySelector('.hero-video');
+            const videoModal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+            const closeBtn = document.querySelector('.video-modal-close');
+            
+            // Function to open video in modal
+            function openVideoModal(video) {
+                const videoSrc = video.querySelector('source').src;
+                modalVideo.querySelector('source').src = videoSrc;
+                modalVideo.load();
+                videoModal.style.display = 'flex';
+                setTimeout(function() {
+                    videoModal.classList.add('active');
+                    modalVideo.play();
+                }, 10);
+            }
+            
+            // Add click handler to hero video
+            if (heroVideo) {
+                heroVideo.style.cursor = 'pointer';
+                heroVideo.addEventListener('click', function() {
+                    openVideoModal(heroVideo);
+                });
+            }
+            
+            // Close modal function
+            function closeModal() {
+                videoModal.classList.remove('active');
+                modalVideo.pause();
+                modalVideo.currentTime = 0;
+                setTimeout(function() {
+                    videoModal.style.display = 'none';
+                }, 300);
+            }
+            
+            closeBtn.addEventListener('click', closeModal);
+            
+            videoModal.addEventListener('click', function(e) {
+                if (e.target === videoModal) {
+                    closeModal();
+                }
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && videoModal.style.display === 'flex') {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
