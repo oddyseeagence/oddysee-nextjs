@@ -153,6 +153,12 @@ body {
     font-size: 15px;
     transition: all .5s;
 }
+a.navbar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
 .navbar-button:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
@@ -270,6 +276,12 @@ body {
     cursor: pointer;
     transition: all .5s;
     margin-top: 10px;
+}
+a.mobile-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .mobile-menu-button:hover {
@@ -1076,7 +1088,8 @@ animation-range: entry 20% cover 100vh;
         order: 2;
     }
     
-    .navbar-button {
+    .navbar-button,
+    a.navbar-button {
         display: none; /* Hide on tablet, shown in hamburger menu instead */
     }
     
@@ -1318,7 +1331,8 @@ animation-range: entry 20% cover 100vh;
         order: 3;
     }
     
-    .navbar-button {
+    .navbar-button,
+    a.navbar-button {
         display: none; /* Hide on mobile, shown in hamburger menu instead */
     }
     

@@ -27,4 +27,6 @@ yarn-error.log*
 /public/images/
 /public/videos/
 
-*.md
+BLOGS_MARKDOWN_SETUP.md
+GOOGLE_SHEETS_SETUP.md
+QUESTIONNAIRE_GOOGLE_SHEETS_SETUP.md
