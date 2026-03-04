@@ -12,7 +12,7 @@ section {
     scroll-margin-top: 90px;
 }
 body {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     font-family: outfit;
     font-weight: 400;

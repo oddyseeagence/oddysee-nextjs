@@ -33,7 +33,7 @@ export default async function BlogsPage() {
       <section className={styles.blogsGrid}>
         {posts.map((post) => {
           return (
-            <article key={post.slug} className="solution-card" style={{ padding: '20px 20px' }}>
+            <article key={post.slug} className="solution-card" style={{ padding: '20px 20px', animation: 'none', transform: 'none', opacity: 1 }}>
               {post.coverImage && (
                 <Link href={`/blogs/${post.slug}`} style={{ display: 'block', textDecoration: 'none' }}>
                   <img
