@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 export const metadata = {
   metadataBase: new URL('https://oddysee.fr'),
   title: 'Oddysee',
@@ -40,6 +42,18 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
         <link rel="stylesheet" href="/style.css" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-K8H3EJW08M"
+          strategy="afterInteractive"
+        />
+        <Script id="google-gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-K8H3EJW08M');
+          `}
+        </Script>
       </head>
       <body>{children}</body>
     </html>
