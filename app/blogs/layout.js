@@ -6,8 +6,6 @@ const IMG_BASE = 'https://silver-chinchilla-534616.hostingersite.com/uploads/GET
 export default function BlogsLayout({ children }) {
   return (
     <>
-      <link rel="stylesheet" href="/style.css" />
-
       <div style={{ background: '#ffffff', minHeight: 'auto', paddingTop: '92px', paddingBottom: '24px' }}>
         <div className="navbar" style={{ animation: 'none', backdropFilter: 'blur(10px)', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}>
           <div className="menu">
