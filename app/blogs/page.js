@@ -37,8 +37,13 @@ export default async function BlogsPage() {
               {post.coverImage && (
                 <Link href={`/blogs/${post.slug}`} style={{ display: 'block', textDecoration: 'none' }}>
                   <img
-                    src={post.coverImage}
+                    src={`${post.coverImage}?w=600&q=75&auto=format&fit=crop`}
                     alt={post.title || 'Image article'}
+                    width={600}
+                    height={190}
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
                     style={{ width: '100%', height: '190px', objectFit: 'cover', borderRadius: '10px', marginBottom: '14px' }}
                   />
                 </Link>
