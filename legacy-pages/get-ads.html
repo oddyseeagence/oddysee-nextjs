@@ -641,15 +641,22 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const testimonialVideos = document.querySelectorAll('.testimonial-video');
-            const heroVideo = document.querySelector('.hero-video');
+            const heroVideos = document.querySelectorAll('.hero-video');
             const videoModal = document.getElementById('videoModal');
             const modalVideo = document.getElementById('modalVideo');
             const closeBtn = document.querySelector('.video-modal-close');
+
+            function getVideoSrc(video) {
+                const source = video.querySelector('source');
+                if (!source) return '';
+                return source.getAttribute('src') || source.getAttribute('data-src') || source.dataset.src || '';
+            }
             
             // Function to open video in modal
             function openVideoModal(video) {
-                // Get the video source
-                const videoSrc = video.querySelector('source').src;
+                // Get the video source (supports lazy data-src and regular src)
+                const videoSrc = getVideoSrc(video);
+                if (!videoSrc) return;
                 
                 // Set the modal video source
                 modalVideo.querySelector('source').src = videoSrc;
@@ -657,10 +664,13 @@
                 
                 // Show modal with fade effect
                 videoModal.style.display = 'flex';
-                setTimeout(function() {
-                    videoModal.classList.add('active');
-                    modalVideo.play();
-                }, 10);
+                videoModal.classList.add('active');
+
+                // Attempt immediate playback; mobile browsers may still require a second tap.
+                const playPromise = modalVideo.play();
+                if (playPromise && typeof playPromise.catch === 'function') {
+                    playPromise.catch(function() {});
+                }
             }
             
             // Add click handlers to testimonial videos
@@ -671,13 +681,13 @@
                 });
             });
             
-            // Add click handler to hero video
-            if (heroVideo) {
-                heroVideo.style.cursor = 'pointer';
-                heroVideo.addEventListener('click', function() {
-                    openVideoModal(heroVideo);
+            // Add click handlers to all hero videos (desktop + mobile)
+            heroVideos.forEach(function(video) {
+                video.style.cursor = 'pointer';
+                video.addEventListener('click', function() {
+                    openVideoModal(video);
                 });
-            }
+            });
             
             // Close modal function
             function closeModal() {
