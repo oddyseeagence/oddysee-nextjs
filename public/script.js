@@ -406,6 +406,7 @@ onDomReady(function() {
       formData.append('timestamp', new Date().toISOString());
 
       // Prepare form data for internal API
+      const LANDING_PAGE = 'https://www.get-ads.agency/generated-page/getads/';
       const leadData = {
         firstName,
         lastName,
@@ -413,7 +414,8 @@ onDomReady(function() {
         phone: fullPhone,
         email,
         message,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        landingPage: LANDING_PAGE
       };
 
       // Send data to internal API (simultaneously)

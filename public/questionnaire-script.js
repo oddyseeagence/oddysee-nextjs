@@ -380,6 +380,7 @@ function submitToGoogleSheets(submissionData) {
     
 
     // Prepare data for internal API
+    const LANDING_PAGE = 'https://www.get-ads.agency/generated-page/getads/';
     const leadData = {
         timestamp: submissionData.timestamp,
         sector: submissionData.sector,
@@ -391,7 +392,8 @@ function submitToGoogleSheets(submissionData) {
         firstName: submissionData.contact.firstName,
         lastName: submissionData.contact.lastName,
         email: submissionData.contact.email,
-        phone: submissionData.contact.phone
+        phone: submissionData.contact.phone,
+        landingPage: LANDING_PAGE
     };
 
     // Send to internal API (simultaneously)
